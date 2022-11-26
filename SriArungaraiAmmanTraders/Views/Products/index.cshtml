@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SriArungaraiAmmanTraders.Models.Product>
+@{
+    ViewBag.Title = "The Products List";
+}
+
+
+
+<div>
+   <a href='@Url.Action("AddProduct","Products")'>
+    <input type="button" value="Add New Product" class="btn btn-primary"/>
+   </a>
+</div>
+
+<br />
+<br />
+
+<div>
+    <table>
+
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.Prod_Code) </th>
+            <th> @Html.DisplayNameFor(model => model.Name) </th>
+            <th> @Html.DisplayNameFor(model => model.Category) </th>
+            <th> @Html.DisplayNameFor(model => model.BrandName) </th>
+            <th> @Html.DisplayNameFor(model => model.QuantityAvailable) </th>
+            <th> @Html.DisplayNameFor(model => model.PricePerQuantity) </th>
+            <th> </th>
+        </tr>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelitem => item.Prod_Code)</td>
+                <td> @Html.DisplayFor(modelitem => item.Name)</td>
+                <td> @Html.DisplayFor(modelitem => item.Category)</td>
+                <td> @Html.DisplayFor(modelitem => item.BrandName)</td>
+                <td> @Html.DisplayFor(modelitem => item.QuantityAvailable)</td>
+                <td> @Html.DisplayFor(modelitem => item.PricePerQuantity)</td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Products", new { id = item.Prod_Code }, null) |
+                    @Html.ActionLink("Delete","Delete","Products", new { id = item.Prod_Code },null)
+                </td>
+            </tr>
+            
+            
+        }
+
+    </table>
+
+
+</div>
+

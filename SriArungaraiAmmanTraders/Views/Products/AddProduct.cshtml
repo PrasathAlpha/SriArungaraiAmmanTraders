@@ -1,0 +1,51 @@
+﻿@model SriArungaraiAmmanTraders.Models.Product
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+<h3> Add New Product</h3>
+
+
+@using (Html.BeginForm("AddProduct", "Products", FormMethod.Post))
+{
+
+    <table>
+        
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Prod_Code) </td>
+            <td>@Html.EditorFor(model => model.Prod_Code)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Name)</td>
+            <td>@Html.EditorFor(model => model.Name)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Category)</td>
+            <td>@Html.EditorFor(model => model.Category)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.BrandName)</td>
+            <td>@Html.EditorFor(model => model.BrandName)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.QuantityAvailable)</td>
+            <td>@Html.EditorFor(model => model.QuantityAvailable)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.PricePerQuantity)</td>
+            <td>@Html.EditorFor(model => model.PricePerQuantity)</td>
+        </tr>
+
+    </table>
+ 
+    <div>
+        <input type="submit" value="Add" class="btn btn-primary" />    
+    </div>
+
+}

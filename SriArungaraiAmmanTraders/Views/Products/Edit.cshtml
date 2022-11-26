@@ -1,0 +1,49 @@
+﻿@model SriArungaraiAmmanTraders.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Products", FormMethod.Post))
+{
+    <table>
+
+            @Html.HiddenFor(model => model.Prod_Code)
+            
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Name)</td>
+            <td>@Html.EditorFor(model => model.Name)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Category)</td>
+            <td>@Html.EditorFor(model => model.Category)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.BrandName)</td>
+            <td>@Html.EditorFor(model => model.BrandName)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.QuantityAvailable)</td>
+            <td>@Html.EditorFor(model => model.QuantityAvailable)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.PricePerQuantity)</td>
+            <td>@Html.EditorFor(model => model.PricePerQuantity)</td>
+        </tr>
+
+        
+    </table>
+
+    <div>
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+
+}            

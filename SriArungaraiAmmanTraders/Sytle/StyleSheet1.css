@@ -1,0 +1,23 @@
+﻿table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightgrey;
+    font-size: 14px;
+    font-family: Arial;
+    text-align: center;
+    color: black;
+    padding: 10px;
+}
+
+
+th {
+    color: white;
+    background-color: green;
+    font-size: 15px;
+}
+
+
+
+body {
+    background-color:darkgray
+}
